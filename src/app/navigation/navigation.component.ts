@@ -14,7 +14,7 @@ export class NavigationComponent {
     .pipe(
       map(result => result.matches)
     );
-    
+
   constructor(private breakpointObserver: BreakpointObserver) {}
-  
+
   }
