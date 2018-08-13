@@ -1,3 +1,6 @@
-<p>
-  my-workflows works!
-</p>
+<mat-list *ngFor="let workflow of workflows">
+  <mat-list-item>
+    <a routerLink="/workflow/{{workflow.name}}">{{workflow.name}}</a>
+    my-workflows works! 
+  </mat-list-item>
+</mat-list>

@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyWorkflowsComponent implements OnInit {
 
+  workflows = [
+    {name: 'foo'},
+    {name: 'bar'},
+  ];
+
   constructor() { }
 
   ngOnInit() {

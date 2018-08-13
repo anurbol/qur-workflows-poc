@@ -39,4 +39,4 @@ testem.log
 Thumbs.db
 
 # VSCode Local History plugin's storage directory
-./history
+.history
