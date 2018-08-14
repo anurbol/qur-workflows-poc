@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import {
   MatToolbarModule,
@@ -13,28 +12,22 @@ import {
   MatListModule,
   MatGridListModule,
   MatCardModule,
-  MatMenuModule
+  MatMenuModule,
+  MatFormFieldModule,
+  MatInputModule
 } from '@angular/material';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { environment } from '../environments/environment';
-import { MyWorkflowsComponent } from './my-workflows/my-workflows.component';
-import { HomeComponent } from './home/home.component';
-import { WorkflowInstancesComponent } from './workflow-instances/workflow-instances.component';
-import { WorkflowComponent } from './workflow/workflow.component';
-
-const appRoutes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-  },
-  { path: 'workflows', component: MyWorkflowsComponent },
-  { path: 'workflow/:id',      component: WorkflowComponent },
-  { path: 'workflow/:id/instances',      component: WorkflowInstancesComponent },
-  // todo
-  // todo
-  // { path: '**', component: PageNotFoundComponent }
-];
+import { HomeComponent } from './routes/home/home.component';
+import { MyWorkflowsComponent } from './routes/my-workflows/my-workflows.component';
+import { WorkflowComponent } from './routes/workflow/workflow.component';
+import { WorkflowInstancesComponent } from './routes/workflow-instances/workflow-instances.component';
+import { NavigationComponent } from './routes.includables/navigation/navigation.component';
+import { DashboardComponent } from './routes.includables/dashboard/dashboard.component';
+import { ContentComponent } from './routes.includables/content/content.component';
+import { AddWorkflowComponent } from './routes/add-workflow/add-workflow.component';
+import { appRoutes } from './app.routes';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,7 +37,9 @@ const appRoutes: Routes = [
     MyWorkflowsComponent,
     HomeComponent,
     WorkflowInstancesComponent,
-    WorkflowComponent
+    WorkflowComponent,
+    ContentComponent,
+    AddWorkflowComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,8 +55,11 @@ const appRoutes: Routes = [
     MatMenuModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: !environment.production } // <-- debugging purposes only
-    )
+      { enableTracing: !environment.production }
+    ),
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,38 @@
+
+enforce this in angular.json:
+"schematics": {
+    "@schematics/angular": {
+      "component": {
+        "spec": false
+      },
+      "service": {
+        "spec": false
+      },
+      "directive": {
+        "spec": false
+      },
+      "guard": {
+        "spec": false
+      },
+      "module": {
+        "spec": false
+      },
+      "pipe": {
+        "spec": false
+      }
+    }
+  }
+
+it will disable creating spec files
+
+
+
+
+
+disallow e2e folder, and instead enforce cypress directory (also check full tree)
+
+
+
+
+
+del karma?

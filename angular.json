@@ -129,5 +129,27 @@
       }
     }
   },
-  "defaultProject": "workflows"
+  "defaultProject": "workflows",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "spec": false
+      },
+      "service": {
+        "spec": false
+      },
+      "directive": {
+        "spec": false
+      },
+      "guard": {
+        "spec": false
+      },
+      "module": {
+        "spec": false
+      },
+      "pipe": {
+        "spec": false
+      }
+    }
+  }
 }

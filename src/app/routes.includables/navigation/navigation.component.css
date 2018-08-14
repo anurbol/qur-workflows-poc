@@ -10,3 +10,11 @@
   position: sticky;
   top: 0;
 }
+
+mat-toolbar a {
+  color: #fff
+}
+
+mat-toolbar a.active {
+  text-decoration: none
+}

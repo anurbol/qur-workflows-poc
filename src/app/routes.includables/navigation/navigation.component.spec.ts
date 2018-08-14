@@ -10,7 +10,7 @@ describe('NavigationComponent', () => {
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
       imports: [MatSidenavModule],
-      declarations: [NavigationComponent]
+      declarations: [NavigationComponent],
     })
     .compileComponents();
 
