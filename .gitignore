@@ -40,4 +40,7 @@ Thumbs.db
 
 # VSCode Local History plugin's storage directory
 .history
-config.bat
+
+# Incident containment: keep local environment secrets out of Git.
+.env
+.env.*
